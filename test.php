@@ -29,7 +29,7 @@
         'Authorization: Bearer '.$token['access_token'],
     ]);
     
-    curl_setopt($curl, CURLOPT_URL, 'https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId='.$youtube_id.'&key'.GOOGLE_CLIENT_SECRET);
+    curl_setopt($curl, CURLOPT_URL, 'https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId='.$youtube_id.'&key='.GOOGLE_CLIENT_SECRET);
     curl_setopt($curl, CURLOPT_TIMEOUT, 30);
     curl_setopt($curl, CURLOPT_POST, 1);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
